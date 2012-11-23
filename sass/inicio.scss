@@ -57,8 +57,8 @@ $color-principal: #FFFFFF;
  
 */
 
-@import "variables.scss";
-@import "funciones.scss";
+@import "include/variables.scss";
+@import "include/funciones.scss";
 
 body {
   // uso de variables
