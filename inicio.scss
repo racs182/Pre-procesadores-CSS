@@ -34,6 +34,8 @@ SASS nos permite usar variables
 
 */
 
+/* 
+
 // Definicion de Variables
 $tamano-fuente-default: 14px;
 $color-fondo: #949494;
@@ -52,7 +54,11 @@ $color-principal: #FFFFFF;
   -moz-box-sizing: $tipo;
   -webkit-box-sizing: $tipo;
 }
+ 
+*/
 
+@import "variables.scss";
+@import "funciones.scss";
 
 body {
   // uso de variables
