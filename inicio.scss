@@ -1,0 +1,86 @@
+
+// Primer Archivo SASS
+
+/* 
+  Introduccion al SASS
+
+    Manejo de Estructura de las reglas SASS 
+ */
+/* 
+  Selectores CSS
+
+#identificadores {
+  propiedad: valor;
+  propiedad: valor;
+  propiedad: valor;
+  propiedad: valor;
+}
+
+.clases {
+  propiedad: valor;
+  propiedad: valor;
+  propiedad: valor;
+  propiedad: valor;
+}
+
+.clase_exterior .clase_interna {
+  propiedad: valor;
+  propiedad: valor;
+  propiedad: valor;
+  propiedad: valor;
+}
+
+SASS nos permite usar variables
+
+*/
+
+// Definicion de Variables
+$tamano-fuente-default: 14px;
+$color-fondo: #949494;
+$color-texto-default: #FF007B;
+$color-principal: #FFFFFF;
+
+// Defenicion de funciones
+@mixin border-radius($tamano: 50px) {
+  -moz-border-radius: $tamano;
+  -webkit-border-radius: $tamano;
+  border-radius: $tamano;
+} 
+
+@mixin box-sizing($tipo: border-box){
+  box-sizing: $tipo;
+  -moz-box-sizing: $tipo;
+  -webkit-box-sizing: $tipo;
+}
+
+
+body {
+  // uso de variables
+  font-size: $tamano-fuente-default;
+  font-family: Helvetica;
+  background-color: $color-fondo;
+}
+
+// Estrutura de cascada en SASS
+.noticia {
+  // Llamado de Funciones
+  @include box-sizing(); // tomando parametro por defecto
+  @include border-radius(10px); // Colocando un parametro
+
+  width: 300px;
+  background-color: white;
+  padding: 10px;
+  h3 {
+    text-transform: uppercase;
+    color: $color-texto-default;
+    &:hover {
+      color: rgba($color-texto-default, 0.5);      
+    }
+  }
+  img {
+    width: 100%;
+  }
+  p {
+    color: black;
+  }
+}
