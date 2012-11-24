@@ -1,0 +1,47 @@
+
+/*Archivo SCSS con  Funciones Border-radius y Border-shadow*/
+
+
+/* Funciones BORDER-RADIUS */
+
+
+@mixin border-radius($valor) {
+  -moz-border-radius: $valor;
+  -webkit-border-radius: $valor;
+  border-radius: $valor;
+}
+
+@mixin border-top-left-radius($valor) {
+  -moz-border-top-left-radius: $valor;
+  -webkit-border-top-left-radius: $valor;
+  border-top-left-radius: $valor;
+}
+
+@mixin border-top-right-radius($valor) {
+  -moz-border-top-right-radius: $valor;
+  -webkit-border-top-right-radius: $valor;
+  border-top-right-radius: $valor;
+}
+
+@mixin border-bottom-left-radius($valor) {
+  -moz-border-bottom-left-radius: $valor;
+  -webkit-border-bottom-left-radius: $valor;
+  border-bottom-left-radius: $valor;
+}
+
+@mixin border-bottom-right-radius($valor) {
+  -moz-border-bottom-right-radius: $valor;
+  -webkit-border-bottom-right-radius: $valor;
+  border-bottom-right-radius: $valor;
+}
+
+
+
+/* Funcion BORDER-SHADOW */
+
+
+@mixin border-shadow($horizontal, $vertical, $blur, $spread, $color) {
+  -moz-border-shadow: $horizontal, $vertical, $blur, $spread, $color;
+  -webkit-border-shadow: $horizontal, $vertical, $blur, $spread, $color;
+  border-shadow:$horizontal, $vertical, $blur, $spread, $color;
+}
