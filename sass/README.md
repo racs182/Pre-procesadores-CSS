@@ -53,3 +53,20 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
   }
   
 ```
+## Variables
+
+### Declaracion de variables
+
+```sass
+  $nombre_variable_1: valor1;
+  $nombre_variable_2: valor2;
+
+  #identificador {
+      propiedad: $nombre_variable_1;
+      propiedad: $nombre_variable_2;
+  }
+
+  etiqueta {
+    propiedad: $nombre_variable_1;
+  }
+```
