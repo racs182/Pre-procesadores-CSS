@@ -1,0 +1,26 @@
+/*Archivo scss de las siguientes funciones 
+gradientes - transiciones - transformaciones */
+
+@mixin gradiente ($color_ini, $color_final){
+	background: -webkit-linear-gradient($color_ini, $color_final);
+	background: -moz-linear-gradient($color_ini, $color_final);
+	background: -o-linear-gradient($color_ini, $color_final);
+	background: linear-gradient($color_ini, $color_final); 
+}
+
+/* indicar el tiempo en milisegundos*/
+@mixin transicion ($tipo, $tiempo, $funcion) {
+	-webkit-transition: $tipo $tiempo $funcion;
+	-moz-transition: $tipo $tiempo $funcion;
+	-ms-transition: $tipo $tiempo $funcion;
+	-o-transition: $tipo $tiempo $funcion;
+	transition: $tipo $tiempo $funcion;
+}
+
+@mixin transformacion ($escala, $rotacion, $trasladoEjeX, $trasladoEjeY,$giroEjeX, $giroEjeY){
+	-moz-transform: scale($escala) rotate(#{$rotacion}deg) translateX(#{$trasladoEjeX}px) translateY(#{$trasladoEjeY}px) skewX(#{$giroEjeX}deg) skewY(#{$giroEjeY}deg);
+-webkit-transform: scale($escala) rotate(#{$rotacion}deg) translateX(#{$trasladoEjeX}px) translateY(#{$trasladoEjeY}px) skewX(#{$giroEjeX}deg) skewY(#{$giroEjeY}deg);
+-o-transform: scale($escala) rotate(#{$rotacion}deg) translateX(#{$trasladoEjeX}px) translateY(#{$trasladoEjeY}px) skewX(#{$giroEjeX}deg) skewY(#{$giroEjeY}deg);
+-ms-transform: scale($escala) rotate(#{$rotacion}deg) translateX(#{$trasladoEjeX}px) translateY(#{$trasladoEjeY}px) skewX(#{$giroEjeX}deg) skewY(#{$giroEjeY}deg);
+transform: scale($escala) rotate(#{$rotacion}deg) translateX(#{$trasladoEjeX}px) translateY(#{$trasladoEjeY}px) skewX(#{$giroEjeX}deg) skewY(#{$giroEjeY}deg); 
+}
