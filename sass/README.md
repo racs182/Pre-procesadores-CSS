@@ -71,7 +71,7 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
   }
 ```
 
-### Ejemplo en Sass 
+### Ejemplo en SASS
 
  ```sass
     $color: #3bbfce;
@@ -89,8 +89,7 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
     }
 ```
 
-### Salida en css del ejemplo anterior
-
+### Salida en CSS 
 
 ```css
   .contenido {
@@ -104,3 +103,8 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
   border-color: #3bbfce;
    }
 ```
+
+
+## Funciones
+
+
