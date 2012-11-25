@@ -112,7 +112,7 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
 #### Inicializacion de funciones
 
 ```sass
-  // "@mixin" Palabra reservada, inicializador de las funciones
+  // "@mixin" Palabra reservada para inicializador de las funciones
   
   //Funcion sin parametros 
   @mixin nombre_funcion {
@@ -124,5 +124,64 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
   @mixin nombre_funcion ($parametro){
     propiedad: $parametro;
     propiedad: $parametro;
+  }
+```
+#### Llamada de funciones
+
+```sass
+  //"@include" Palabra reservada para llamar a la funcion creada 
+
+  // Funcion sin parametros
+  @include nombre_funcion {
+    propiedad: valor;
+    propiedad: valor;
+  }
+
+  //Funcion con parametros
+  @include nombre_funcion ($parametro){
+    propiedad: $parametro;
+    propiedad: $parametro;
+  }
+```
+
+### Ejemplo en SASS
+
+```sass
+  $alto:100px;
+  $ancho:200px;
+
+  @mixin transicion ($tipo, $tiempo, $funcion) {
+    -webkit-transition: $tipo $tiempo $funcion;
+    -moz-transition: $tipo $tiempo $funcion;
+    -ms-transition: $tipo $tiempo $funcion;
+    -o-transition: $tipo $tiempo $funcion;
+    transition: $tipo $tiempo $funcion;
+  }
+
+  .caja {
+    heigth: $alto;
+    width: $ancho;
+    &:hover {
+      height: $alto * 2;
+      @include (height,500ms,ease)
+    }
+  }
+```
+
+### Salida en CSS
+
+```css
+  .caja{
+    height: 100px
+    width: 200px
+    }
+
+  .caja:hover{
+    height: 200px;
+    -webkit-transition: height 500ms ease;
+    -moz-transition: height 500ms ease;
+    -ms-transition: height 500ms ease;
+    -o-transition: height 500ms ease;
+    transition: height 500ms ease;
   }
 ```
