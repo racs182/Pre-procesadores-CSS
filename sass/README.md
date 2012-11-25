@@ -107,9 +107,7 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
 
 ## Funciones
 
-### Declaracion de las Funciones
-
-#### Inicializacion de funciones
+### Inicializacion de funciones
 
 ```sass
   // "@mixin" Palabra reservada para inicializador de las funciones
@@ -126,7 +124,7 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
     propiedad: $parametro;
   }
 ```
-#### Llamada de funciones
+### Llamada de funciones
 
 ```sass
   //"@include" Palabra reservada para llamar a la funcion creada 
