@@ -132,15 +132,15 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
   //"@include" Palabra reservada para llamar a la funcion creada 
 
   // Funcion sin parametros
-  @include nombre_funcion {
-    propiedad: valor;
+  .clase {
+    @include nombre_funcion
     propiedad: valor;
   }
-
+  
   //Funcion con parametros
-  @include nombre_funcion ($parametro){
-    propiedad: $parametro;
-    propiedad: $parametro;
+  .clase {
+    @include nombre_funcion ($parametro)
+    propiedad: valor;
   }
 ```
 
