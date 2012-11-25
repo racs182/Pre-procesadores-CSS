@@ -73,7 +73,7 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
 
 ### Ejemplo en SASS
 
- ```sass
+```sass
     $color: #3bbfce;
     $margen: 16px;
 
@@ -108,3 +108,21 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
 ## Funciones
 
 ### Declaracion de las Funciones
+
+#### Inicializacion de funciones
+
+```sass
+  // "@mixin" Palabra reservada, inicializador de las funciones
+  
+  //Funcion sin parametros 
+  @mixin nombre_funcion {
+    propiedad: valor;
+    propiedad: valor;
+  }
+
+  //Funcion con parametros  
+  @mixin nombre_funcion ($parametro){
+    propiedad: $parametro;
+    propiedad: $parametro;
+  }
+```
