@@ -70,3 +70,38 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
     propiedad: $nombre_variable_1;
   }
 ```
+
+### Ejemplo en Sass 
+
+ ```sass
+    $blue: #3bbfce;
+    $margin: 16px;
+
+    .content-navigation {
+    border-color: $blue;
+    color:
+      darken($blue, 9%);
+    }
+
+    .border {
+    padding: $margin / 2;
+    margin: $margin / 2;
+    border-color: $blue;
+    }
+```
+
+### Salida en css del ejemplo anterior
+
+
+```css
+  .content-navigation {
+  border-color: #3bbfce;
+  color: #2b9eab;
+  }
+
+  .border {
+  padding: 8px;
+  margin: 8px;
+  border-color: #3bbfce;
+   }
+```
