@@ -107,4 +107,4 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
 
 ## Funciones
 
-
+### Declaracion de las Funciones
