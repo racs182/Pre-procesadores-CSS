@@ -74,18 +74,18 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
 ### Ejemplo en SASS
 
 ```sass
-    $color: #3bbfce;
-    $margen: 16px;
+    $amarillo: #FEFF00; // Amarillo
+    $margen-default: 20px; // margen que se usa por defecto
 
     .contenido {
-    border-color: $color;
-    color: darken($blue, 9%);
+    border-color: $amarillo;
+    color: darken($amarillo, 9%);
     }
 
     .borde {
-    padding: $margen / 2;
-    margin: $margen / 2;
-    border-color: $color;
+    padding: $margen-default / 2;
+    margin: $margen-default / 2;
+    border-color: $amarillo;
     }
 ```
 
@@ -93,14 +93,14 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
 
 ```css
   .contenido {
-  border-color: #3bbfce;
-  color: #2b9eab;
+  border-color: #FEFF00;
+  color: #d0d100;
   }
 
   .border {
-  padding: 8px;
-  margin: 8px;
-  border-color: #3bbfce;
+  padding: 10px;
+  margin: 10px;
+  border-color: #FEFF00;
    }
 ```
 
