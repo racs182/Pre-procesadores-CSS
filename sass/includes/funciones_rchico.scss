@@ -5,30 +5,36 @@
 /* Funciones BORDER-RADIUS */
 
 
+/*Todos los Bordes*/
 @mixin border-radius($valor) {
   -moz-border-radius: $valor;
   -webkit-border-radius: $valor;
   border-radius: $valor;
 }
 
+
+/*Borde Superior Izquierdo*/
 @mixin border-top-left-radius($valor) {
   -moz-border-top-left-radius: $valor;
   -webkit-border-top-left-radius: $valor;
   border-top-left-radius: $valor;
 }
 
+/*Borde Superior Derecho*/
 @mixin border-top-right-radius($valor) {
   -moz-border-top-right-radius: $valor;
   -webkit-border-top-right-radius: $valor;
   border-top-right-radius: $valor;
 }
 
+/*Borde Inferior Izquierdo*/
 @mixin border-bottom-left-radius($valor) {
   -moz-border-bottom-left-radius: $valor;
   -webkit-border-bottom-left-radius: $valor;
   border-bottom-left-radius: $valor;
 }
 
+/*Borde Inferior Derecho*/
 @mixin border-bottom-right-radius($valor) {
   -moz-border-bottom-right-radius: $valor;
   -webkit-border-bottom-right-radius: $valor;
@@ -37,11 +43,11 @@
 
 
 
-/* Funcion BORDER-SHADOW */
+/* Funcion BOX-SHADOW */
 
 
-@mixin border-shadow($horizontal, $vertical, $blur, $spread, $color) {
-  -moz-border-shadow: $horizontal, $vertical, $blur, $spread, $color;
-  -webkit-border-shadow: $horizontal, $vertical, $blur, $spread, $color;
-  border-shadow:$horizontal, $vertical, $blur, $spread, $color;
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $color) {
+  -moz-box-shadow: $horizontal, $vertical, $blur, $spread, $color;
+  -webkit-box-shadow: $horizontal, $vertical, $blur, $spread, $color;
+  box-shadow:$horizontal, $vertical, $blur, $spread, $color;
 }
