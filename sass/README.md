@@ -53,3 +53,133 @@ Este ejemplo colocaremos una entrada de un archivo SASS y su respectiva salida s
   }
   
 ```
+## Variables
+
+### Declaracion de variables
+
+```sass
+  $nombre_variable_1: valor1;
+  $nombre_variable_2: valor2;
+
+  #identificador {
+      propiedad: $nombre_variable_1;
+      propiedad: $nombre_variable_2;
+  }
+
+  etiqueta {
+    propiedad: $nombre_variable_1;
+  }
+```
+
+### Ejemplo en SASS
+
+```sass
+    $amarillo: #FEFF00; // Amarillo
+    $margen-default: 20px; // margen que se usa por defecto
+
+    .contenido {
+    border-color: $amarillo;
+    color: darken($amarillo, 9%);
+    }
+
+    .borde {
+    padding: $margen-default / 2;
+    margin: $margen-default / 2;
+    border-color: $amarillo;
+    }
+```
+
+### Salida en CSS 
+
+```css
+  .contenido {
+  border-color: #FEFF00;
+  color: #d0d100;
+  }
+
+  .border {
+  padding: 10px;
+  margin: 10px;
+  border-color: #FEFF00;
+   }
+```
+
+
+## Funciones
+
+### Inicializacion de funciones
+
+```sass
+  // "@mixin" Palabra reservada para inicializador de las funciones
+  
+  //Funcion sin parametros 
+  @mixin nombre_funcion {
+    propiedad: valor;
+    propiedad: valor;
+  }
+
+  //Funcion con parametros  
+  @mixin nombre_funcion ($parametro){
+    propiedad: $parametro;
+    propiedad: $parametro;
+  }
+```
+### Llamada de funciones
+
+```sass
+  //"@include" Palabra reservada para llamar a la funcion creada 
+
+  // Funcion sin parametros
+  .clase {
+    @include nombre_funcion
+    propiedad: valor;
+  }
+  
+  //Funcion con parametros
+  .clase {
+    @include nombre_funcion ($parametro)
+    propiedad: valor;
+  }
+```
+
+### Ejemplo en SASS
+
+```sass
+  $alto:100px;
+  $ancho:200px;
+
+  @mixin transicion ($tipo, $tiempo, $funcion) {
+    -webkit-transition: $tipo $tiempo $funcion;
+    -moz-transition: $tipo $tiempo $funcion;
+    -ms-transition: $tipo $tiempo $funcion;
+    -o-transition: $tipo $tiempo $funcion;
+    transition: $tipo $tiempo $funcion;
+  }
+
+  .caja {
+    heigth: $alto;
+    width: $ancho;
+    &:hover {
+      height: $alto * 2;
+      @include (height,500ms,ease)
+    }
+  }
+```
+
+### Salida en CSS
+
+```css
+  .caja{
+    height: 100px
+    width: 200px
+    }
+
+  .caja:hover{
+    height: 200px;
+    -webkit-transition: height 500ms ease;
+    -moz-transition: height 500ms ease;
+    -ms-transition: height 500ms ease;
+    -o-transition: height 500ms ease;
+    transition: height 500ms ease;
+  }
+```

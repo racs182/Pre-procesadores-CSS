@@ -1,0 +1,10 @@
+// text shadow hacia afuera y hacia dentro outline
+
+@mixin text-shadow ($vertical,$horizontal,$blur,$color){
+	text-shadow: $vertical $horizontal $blur $color;
+    filter: dropshadow(color=$color, offx=$horizontal, offy=$vertical);
+}
+
+@mixin outline ($ancho , $tipo , $color){
+	outline: $ancho $tipo $color;
+}
